@@ -15,7 +15,7 @@ function App() {
           <h2 className="text-xl text-blue-600 font-medium mb-4">BSIT Student</h2>
           <p className="text-gray-600 mb-6 leading-relaxed max-w-2xl">
             I am a BSIT student who loves doing random IT things, with a strong passion for IoT, Web Development, and Multimedia. 
-            I am open to learning new skills to improve my arsenal and apply them to creative and technical work.
+            I am open to learn new skills to improve my arsenal and apply them to creative and technical work.
           </p>
           
           {/* Contacts */}
@@ -84,7 +84,8 @@ function App() {
           {/* Portfolio Card 1 */}
           <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-gray-100 flex flex-col group">
             <div className="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center">
-              <img src="https://images.unsplash.com/photo-1584473453303-3e05a30e8c8a?auto=format&fit=crop&q=80&w=600&h=400" alt="IoT Project" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              {/* <img src="https://images.unsplash.com/photo-1584473453303-3e05a30e8c8a?auto=format&fit=crop&q=80&w=600&h=400" alt="IoT Project" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /> */}
+              <i className="fas fa-laptop-code text-5xl text-gray-400 group-hover:scale-110 transition-transform duration-300"></i>
             </div>
             <div className="p-5 flex-1 flex flex-col">
               <h4 className="font-bold text-gray-900 mb-2">Smart Aquaponics System</h4>
@@ -99,8 +100,9 @@ function App() {
               <i className="fas fa-laptop-code text-5xl text-gray-400 group-hover:scale-110 transition-transform duration-300"></i>
             </div>
             <div className="p-5 flex-1 flex flex-col">
-              <h4 className="font-bold text-gray-900 mb-2">AgriTech Hackathon</h4>
-              <p className="text-sm text-gray-600 mb-4 flex-1">Collaborated in a team of three to innovate agricultural technology solutions.</p>
+              <h4 className="font-bold text-gray-900 mb-2">Smart Farming</h4>
+              <p className="text-sm text-gray-600 mb-4 flex-1">A management smart farming ecosystem with intelligent soil monitoring, 
+                                                              plant management, and data-driven insights for optimal crop yields.</p>
               <a href="#" className="text-blue-600 text-sm font-semibold hover:underline mt-auto">View Details <i className="fas fa-arrow-right ml-1"></i></a>
             </div>
           </div>
