@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTheme } from './context/ThemeContext';
 import { ThemeToggleButton } from './components/changingModeBtn';
-import dp from "./assets/images/Sorita.jpg";
+import awake from "./assets/images/Sorita.jpg";
+import sleep from "./assets/images/sleep.jpg";
 
 function App() {
   const { darkMode } = useTheme();
@@ -13,8 +14,8 @@ function App() {
       <div className="p-6 md:p-10 max-w-5xl mx-auto">
       
       <header className={`rounded-2xl shadow-sm p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center gap-8 border transition-colors duration-300 ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-100'}`}>
-        <div className="w-40 h-40 shrink-0 rounded-full overflow-hidden border-4 border-gray-50 shadow-inner bg-gray-200">
-          <img src={dp} alt="Profile" />
+        <div className={`w-48 h-48 rounded-full overflow-hidden flex-shrink-0 transition-transform duration-300 ${darkMode ? 'border-4 border-gray-500' : 'border-4 border-gray-100'}`}>
+          <img src={darkMode ? sleep : awake} alt="Profile" />
         </div>
         
         <div className="text-center md:text-left flex-1">
