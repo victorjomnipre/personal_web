@@ -14,14 +14,15 @@ function App() {
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Victor Jom A. Sorita</h1>
           <h2 className="text-xl text-blue-600 font-medium mb-4">BSIT Student</h2>
           <p className="text-gray-600 mb-6 leading-relaxed max-w-2xl">
-            I am a BSIT student who loves doing random IT things, with a strong passion for IoT, Web Development, and Multimedia. 
-            I am open to learn new skills to improve my arsenal and apply them to creative and technical work.
+            &nbsp; &nbsp; &nbsp;Currently taking a Bachelor of Science in Information Technology at Iloilo Science and Technology
+            University, with an interest in layout and design, programming, and IoT based projects. I
+            am open to learning new skills to improve my arsenal and apply them to creative and technical work.
           </p>
           
           {/* Contacts */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3">
             <a href="mailto:soritavictorjom@gmail.com" className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
-              <i className="fas fa-envelope"></i> Email
+              <i className="fas fa-envelope"></i> victorjomsorita@gmail.com
             </a>
             <a href="#" className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
               <i className="fas fa-phone"></i> 09630437375
