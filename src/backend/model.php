@@ -84,6 +84,50 @@ switch ($action) {
         sendJson(['data' => $projectList]);
         break;
 
+    case 'projectdesc':
+        $id = $_GET['id'] ?? null;
+
+        if (!$id) {
+            sendJson(['error' => 'Project ID is missing'], 400);
+        }
+        $projSql = '
+            SELECT 
+                p.projectID, p.description, p.title, p.problem, p.proposal, p.solution, 
+                pi.imagePath 
+            FROM project p
+            LEFT JOIN projectimage pi ON p.projectID = pi.projectID
+            WHERE p.projectID = ?
+        ';
+        
+        $stmt = $conn->prepare($projSql);
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $projectDesc = null;
+        while ($row = $result->fetch_assoc()) {
+            
+            if ($projectDesc === null) {
+                $projectDesc = [
+                    'projectID' => $row['projectID'],
+                    'title' => $row['title'],
+                    'description' => $row['description'],
+                    'problem' => $row['problem'],
+                    'proposal' => $row['proposal'],
+                    'solution' => $row['solution'],
+                    'images' => []
+                ];
+            }
+            if (!empty($row['imagePath'])) {
+                $projectDesc['images'][] = $row['imagePath'];
+            }
+        }
+        if (!$projectDesc) {
+             sendJson(['error' => 'Project not found'], 404);
+        }
+
+        sendJson(['data' => $projectDesc]);
+        break;
+
     default:
         sendJson(['error' => 'Unknown action'], 400);
         break;

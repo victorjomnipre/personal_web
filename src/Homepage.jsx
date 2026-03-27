@@ -4,7 +4,6 @@ import { useTheme } from './context/ThemeContext';
 import { ThemeToggleButton } from './components/changingModeBtn';
 import Background from './Background';
 import Portfolio from './Portfolio';
-import Comments from './Comments';
 import awake from "./assets/images/Sorita.jpg";
 import sleep from "./assets/images/sleep.jpg";
 
@@ -109,7 +108,6 @@ function Homepage() {
 
         </section>
       <Portfolio />
-      <Comments />
       
       {/* Footer */}
       <footer className={`mt-16 text-center text-sm pb-8 transition-colors duration-300 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
